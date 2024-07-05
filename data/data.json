@@ -1,0 +1,35 @@
+[
+  {"question": "What is the capital of France?", "subject": "Geography", "type": "MCQ", "options": ["Paris", "Berlin", "London", "Madrid"], "answer": "Paris", "difficulty": "Easy", "marks": 1},
+  {"question": "Who is the president of the United States?", "subject": "Politics", "type": "MCQ", "options": ["Joe Biden", "Donald Trump", "Barack Obama", "George Washington"], "answer": "Joe Biden", "difficulty": "Easy", "marks": 1},
+  {"question": "What is the square root of 25?", "subject": "Mathematics", "type": "MCQ", "options": ["5", "10", "2", "7"], "answer": "5", "difficulty": "Easy", "marks": 1},
+  {"question": "Explain Newton's First Law of Motion.", "subject": "Physics", "type": "Written", "difficulty": "Easy", "marks": 1},
+  {"question": "Solve the equation: 2x + 5 = 15", "subject": "Mathematics", "type": "Written", "difficulty": "Medium", "marks": 2},
+  {"question": "Explain the process of photosynthesis.", "subject": "Biology", "type": "Written", "difficulty": "Medium", "marks": 2},
+  {"question": "Discuss the causes and consequences of the Industrial Revolution.", "subject": "History", "type": "Written", "difficulty": "Hard", "marks": 3},
+  {"question": "Examine the role of mitochondria in cellular respiration.", "subject": "Biology", "type": "Written", "difficulty": "Hard", "marks": 3},
+  {"question": "Discuss the impact of artificial intelligence on society.", "subject": "Computer Science", "type": "Written", "difficulty": "Hard", "marks": 5},
+  
+  {"question": "Who wrote 'Romeo and Juliet'?", "subject": "Literature", "type": "MCQ", "options": ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"], "answer": "William Shakespeare", "difficulty": "Easy", "marks": 1},
+  {"question": "List three properties of acids.", "subject": "Chemistry", "type": "MCQ", "options": ["Sour taste", "Turns blue litmus paper red", "High pH", "Low pH"], "answer": ["Sour taste", "Turns blue litmus paper red", "Low pH"], "difficulty": "Easy", "marks": 1},
+  
+  {"question": "Define the term 'Democracy'.", "subject": "Political Science", "type": "Written", "difficulty": "Easy", "marks": 1},
+  {"question": "Name the largest planet in our solar system.", "subject": "Astronomy", "type": "Written", "difficulty": "Easy", "marks": 1},
+  
+  {"question": "Explain the law of diminishing marginal returns.", "subject": "Economics", "type": "Written", "difficulty": "Medium", "marks": 2},
+  {"question": "Describe the structure of a prokaryotic cell.", "subject": "Biology", "type": "Written", "difficulty": "Medium", "marks": 2},
+  
+  {"question": "Discuss the impact of globalization on culture.", "subject": "Sociology", "type": "Written", "difficulty": "Hard", "marks": 3},
+  {"question": "Evaluate the role of the United Nations in maintaining global peace.", "subject": "International Relations", "type": "Written", "difficulty": "Hard", "marks": 3},
+  
+  {"question": "Examine the influence of art movements on modern architecture.", "subject": "Art and Architecture", "type": "Written", "difficulty": "Hard", "marks": 5},
+  {"question": "Discuss the ethical implications of gene editing technologies.", "subject": "Ethics", "type": "Written", "difficulty": "Hard", "marks": 5},
+  
+  {"question": "What is the capital of Germany?", "subject": "Geography", "type": "MCQ", "options": ["Berlin", "Paris", "Rome", "Madrid"], "answer": "Berlin", "difficulty": "Easy", "marks": 1},
+  {"question": "Who won the Nobel Prize in Physics in 2020?", "subject": "Physics", "type": "MCQ", "options": ["Roger Penrose", "Andrea Ghez", "Reinhard Genzel", "Emmanuelle Charpentier"], "answer": "Roger Penrose", "difficulty": "Easy", "marks": 1},
+  {"question": "Simplify the expression: 3(x + 4) - 2", "subject": "Mathematics", "type": "Written", "difficulty": "Medium", "marks": 2},
+  {"question": "Discuss the impact of deforestation on biodiversity.", "subject": "Environmental Science", "type": "Written", "difficulty": "Medium", "marks": 2},
+  {"question": "What is the structure of DNA?", "subject": "Biology", "type": "Written", "difficulty": "Hard", "marks": 3},
+  {"question": "Explain the concept of justice in Plato's 'Republic'.", "subject": "Philosophy", "type": "Written", "difficulty": "Hard", "marks": 3},
+  {"question": "Compare and contrast classical and operant conditioning in psychology.", "subject": "Psychology", "type": "Written", "difficulty": "Hard", "marks": 5},
+  {"question": "Discuss the impact of climate change on polar ice caps.", "subject": "Environmental Science", "type": "Written", "difficulty": "Hard", "marks": 5}
+]

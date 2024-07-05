@@ -1,0 +1,120 @@
+<!-- public/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator</title>
+</head>
+<body>
+    <h1>Question Paper Generator</h1>
+    <button onclick="generateQuestionPaper()">Generate Question Paper</button>
+    <div id="questionPaperOutput"></div>
+
+    <script>
+        async function generateQuestionPaper() {
+            const response = await fetch('/generateQuestionPaper');
+            const questionPaper = await response.json();
+            displayQuestionPaper(questionPaper);
+        }
+
+        function displayQuestionPaper(questionPaper) {
+            const outputDiv = document.getElementById('questionPaperOutput');
+            outputDiv.innerHTML = '<h2>Generated Question Paper:</h2>';
+
+            if (questionPaper.length === 0) {
+                outputDiv.innerHTML += '<p>No questions available for the specified criteria.</p>';
+            } else {
+                questionPaper.forEach(question => {
+                    outputDiv.innerHTML += `<p>${question.question} (${question.difficulty}, ${question.marks} marks)</p>`;
+                });
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Paper Generator</title>
+    <style>
+        body{
+            text-align: center;
+            /* border: 3px solid green; */
+            border:2px solid green;
+        width: 1000px;
+        margin-left:300px;
+        background-color: rgb(229, 250, 215);
+        border-radius: 50px;
+        padding-top: 20px;
+        }
+        
+       input {
+        border-style: none;
+        outline: none;
+        flex-shrink: 1;
+        font-size: 20px;
+    
+    }
+
+    </style>
+</head>
+<body >
+    <h1>Question Paper Generator</h1>
+    <button onclick="generateQuestionPaper()">Generate Question Paper</button>
+    <div id="questionPaperOutput"></div>
+
+    <script>
+        async function generateQuestionPaper() {
+            const response = await fetch('/generateQuestionPaper');
+            const questionPaper = await response.json();
+            displayQuestionPaper(questionPaper);
+        }
+
+        function displayQuestionPaper(questionPaper) {
+            const outputDiv = document.getElementById('questionPaperOutput');
+            outputDiv.innerHTML = '<h2>Generated Question Paper</h2>';
+
+            // Organize questions by difficulty
+            const easyQuestions = questionPaper.filter(question => question.difficulty === 'Easy');
+            const mediumQuestions = questionPaper.filter(question => question.difficulty === 'Medium');
+            const hardQuestions = questionPaper.filter(question => question.difficulty === 'Hard');
+
+            // Display questions in sections
+            displayQuestionsSection('Easy', easyQuestions);
+            displayQuestionsSection('Medium', mediumQuestions);
+            displayQuestionsSection('Hard', hardQuestions);
+        }
+
+        function displayQuestionsSection(sectionTitle, questions) {
+            const outputDiv = document.getElementById('questionPaperOutput');
+            outputDiv.innerHTML += `<h3>${sectionTitle} Difficulty</h3>`;
+
+            if (questions.length === 0) {
+                outputDiv.innerHTML += '<p>No questions available for this difficulty.</p>';
+            } else {
+                questions.forEach((question, index) => {
+                    outputDiv.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question.question} (${question.marks} marks)`;
+
+                    // Display options for MCQ
+                    if (question.type === 'MCQ') {
+                        outputDiv.innerHTML += '<br><strong>Options:</strong> ' + question.options.join(', ');
+                        outputDiv.innerHTML += '<br><strong>Answer:</strong> ' + question.answer;
+                    } else {
+                        // Display text box for other types of questions
+                        outputDiv.innerHTML += '<br><strong>Your Answer:</strong> <input type="text" id="answerTextbox">';
+                    }
+
+                    outputDiv.innerHTML += '</p>';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
